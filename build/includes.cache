@@ -1,0 +1,47 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/pi/.arduino15/packages/arduino/hardware/renesas_uno/1.1.0/cores/arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/pi/.arduino15/packages/arduino/hardware/renesas_uno/1.1.0/variants/UNOWIFIR4"
+  },
+  {
+    "Sourcefile": "/home/pi/project/arduino/build/sketch/temperature.ino.cpp",
+    "Include": "OneWire.h",
+    "Includepath": "/home/pi/Arduino/libraries/OneWire"
+  },
+  {
+    "Sourcefile": "/home/pi/project/arduino/build/sketch/temperature.ino.cpp",
+    "Include": "DallasTemperature.h",
+    "Includepath": "/home/pi/Arduino/libraries/DallasTemperature"
+  },
+  {
+    "Sourcefile": "/home/pi/project/arduino/build/sketch/temperature.ino.cpp",
+    "Include": "SoftwareSerial.h",
+    "Includepath": "/home/pi/.arduino15/packages/arduino/hardware/renesas_uno/1.1.0/libraries/SoftwareSerial/src"
+  },
+  {
+    "Sourcefile": "/home/pi/project/arduino/build/sketch/temperature.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/pi/Arduino/libraries/OneWire/OneWire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/pi/Arduino/libraries/DallasTemperature/DallasTemperature.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/pi/.arduino15/packages/arduino/hardware/renesas_uno/1.1.0/libraries/SoftwareSerial/src/SoftwareSerial.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

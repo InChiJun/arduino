@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "",
+  "fqbn": "arduino:renesas_uno:unor4wifi",
+  "hardwareFolders": "/home/pi/.arduino15/packages",
+  "otherLibrariesFolders": "/home/pi/Arduino/libraries",
+  "runtime.ide.version": "10607",
+  "sketchLocation": "/home/pi/project/arduino/temperature"
+}
