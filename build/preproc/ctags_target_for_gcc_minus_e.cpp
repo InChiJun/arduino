@@ -1,29 +1,46 @@
-# 1 "/home/pi/project/arduino/temperature/temperature.ino"
-# 2 "/home/pi/project/arduino/temperature/temperature.ino" 2
-# 3 "/home/pi/project/arduino/temperature/temperature.ino" 2
-# 4 "/home/pi/project/arduino/temperature/temperature.ino" 2
+# 1 "/home/pi/project/arduino/will/will.ino"
+# 2 "/home/pi/project/arduino/will/will.ino" 2
 
-#define RX_PIN 10
-#define TX_PIN 11
-
-SoftwareSerial mySerial(10, 11);
-int ONE_WIRE_BUS = 2;
-
-OneWire oneWire(ONE_WIRE_BUS);
-DallasTemperature sensors(&oneWire);
-
-void setup(void){
-  _UART1_.begin(115200);
-
-  mySerial.begin(9600);
+void setup()
+{
+    pinMode(A3,OUTPUT);
+    pinMode(A2,OUTPUT);
+    digitalWrite(A3,HIGH);
+    digitalWrite(A2,LOW);
+    // Send the initialization sequence to the nunchuk.
+    nunchuk.begin();
+    _UART1_.begin(115200);
 }
 
-void loop(void){
-  sensors.requestTemperatures();
-  float temperature = sensors.getTempCByIndex(0);
+void loop()
+{
+    nunchuk.update();
+    delay(500);
 
-  _UART1_.println(temperature);
-  mySerial.print(temperature);
-  mySerial.write('\n');
-  delay(1000);
+    // Nunchuk Joystick position:
+    // nunchuk.x
+    // nunchuk.y
+    _UART1_.print("=========================\n");
+    _UART1_.print("X: ");
+    _UART1_.print(nunchuk.x);
+    _UART1_.print("Y: ");
+    _UART1_.print(nunchuk.y);
+    // Nunchuk Acceleration:
+    // nunchuk.ax
+    // nunchuk.ay
+    // nunchuk.az
+    _UART1_.print("ax: ");
+    _UART1_.print(nunchuk.ax);
+    _UART1_.print("ay: ");
+    _UART1_.print(nunchuk.ay);
+    _UART1_.print("az: ");
+    _UART1_.print(nunchuk.az);
+    // Nunchuk Button states:
+    // nunchuk.c
+    // nunchuk.z
+    _UART1_.print("c button: ");
+    _UART1_.print(nunchuk.c);
+    _UART1_.print("z button: ");
+    _UART1_.println(nunchuk.z);
+    _UART1_.print("=========================\n");
 }
